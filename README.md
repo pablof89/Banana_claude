@@ -17,5 +17,15 @@ plan → aprobación → ejecución → revisión de píxeles).
 - Variable de entorno `GEMINI_API_KEY` configurada antes de ejecutar
   generaciones pagadas (nunca se solicita, imprime ni almacena la clave).
 
+## Configuración de la API key
+
+1. Copia `.env.example` a `.env` y completa `GEMINI_API_KEY` con tu clave.
+2. Carga la variable en tu shell antes de usar la skill, por ejemplo:
+   `export $(grep -v '^#' .env | xargs)` o `export GEMINI_API_KEY=tu_clave`.
+3. `.env` está en `.gitignore`: nunca se sube al repositorio.
+
+Si una clave llegó a compartirse por chat, ticket o commit, considérala
+comprometida y regenérala en Google AI Studio antes de usarla.
+
 No requiere dependencias de terceros: los scripts usan únicamente la
 librería estándar de Python.

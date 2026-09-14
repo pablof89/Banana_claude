@@ -1,0 +1,13 @@
+# Secrets / entorno local
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Estado local de la skill banana
+.banana/
